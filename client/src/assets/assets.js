@@ -61,7 +61,7 @@ export const testimonialsData = [
         name:'Donald Jackman',
         role:'Graphic Designer',
         stars:5,
-        text:`I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`
+        text:`Absolutely love this app! The interface is clean and easy to use, and everything works smoothly. It’s fast, reliable, and has all the features I need. Great job by the developers!`
     },
     {
         image:profile_img_2,
@@ -72,10 +72,10 @@ export const testimonialsData = [
     },
     {
         image:profile_img_1,
-        name:'Donald Jackman',
-        role:' Graphic Designer',
+        name:'Lena Müller',
+        role:' Product Designer',
         stars:5,
-        text:`I've been using bg.removal for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.`
+        text:`This app has made my life so much easier. It’s intuitive, lightweight, and performs really well. Definitely one of the best apps I've used recently. Highly recommended.`
     },
 ]
 
