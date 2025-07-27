@@ -4,21 +4,21 @@ import FormData from "form-data"
 
 export const generateImage = async (req, res) => {
   try {
-    const { userId, prompt } = req.body
+    const { userId, prompt } = req.body;
 
     if (!userId || !prompt) {
       return res.status(400).json({
         success: false,
         message: "Missing userId or prompt",
-      })
+      });
     }
 
-    const user = await userModel.findById(userId)
+    const user = await userModel.findById(userId);
     if (!user) {
       return res.status(404).json({
         success: false,
         message: "User not found",
-      })
+      });
     }
 
     if (user.creditBalance <= 0) {
@@ -26,11 +26,11 @@ export const generateImage = async (req, res) => {
         success: false,
         message: "Insufficient Credits",
         creditBalance: user.creditBalance,
-      })
+      });
     }
 
-    const formData = new FormData()
-    formData.append("prompt", prompt)
+    const formData = new FormData();
+    formData.append("prompt", prompt);
 
     const { data: imageBuffer } = await axios.post(
       "https://clipdrop-api.co/text-to-image/v1",
@@ -42,24 +42,28 @@ export const generateImage = async (req, res) => {
         },
         responseType: "arraybuffer",
       }
-    )
+    );
 
-    const base64Image = Buffer.from(imageBuffer, "binary").toString("base64")
-    const resultImage = `data:image/png;base64,${base64Image}`
+    const base64Image = Buffer.from(imageBuffer, "binary").toString("base64");
+    const resultImage = `data:image/png;base64,${base64Image}`;
 
-    user.creditBalance -= 1
-    await user.save()
+    user.creditBalance -= 1;
+    await user.save();
 
-    return res.json({
+    return res.status(200).json({
       success: true,
       message: "Image Generated",
       creditBalance: user.creditBalance,
       resultImage,
-    })
-  } catch (err) {
-    console.error("generateImage error:", err)
-    return res
-      .status(500)
-      .json({ success: false, message: err.message || "Server Error" })
+    });
+
+  } catch (error) {
+    console.error("generateImage error:", error);
+    res.status(500).json({
+      success: false,
+      message: error.message || "Server Error",
+    });
   }
-}
+};
+
+export default generateImage;
