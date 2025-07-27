@@ -53,6 +53,9 @@ We welcome contributions from the community to improve our website! If you'd lik
 **Home Page**  
 ![front](https://github.com/user-attachments/assets/c4e5f8b7-7911-4252-9a3a-7b5792762b28)
 
+**How it Works**  
+![steps](https://github.com/user-attachments/assets/49f31383-ff62-4a29-8870-29699277dc26)
+
 **About Our Imagify**  
 ![about](https://github.com/user-attachments/assets/c9d305c2-58fb-4091-a546-42a967a4c061)
 
