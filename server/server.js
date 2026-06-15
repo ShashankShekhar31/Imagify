@@ -12,14 +12,22 @@ const app = express()
 
 app.use(express.json())
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://imagify-one-theta.vercel.app",
+  "https://imagify-9u2f7cx0s-shashank-shekhars-projects.vercel.app"
+];
+
 app.use(
   cors({
-    // origin: [
-    //     "http://localhost:5173",
-    //     "https://imagify-one-theta.vercel.app"
-    // ],
-    origin: true,
-    credentials: true
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
   })
 );
 await connectDB()
