@@ -76,7 +76,7 @@ export const generateImage = async (req, res) => {
 export const getUserImages = async (req, res) => {
   try {
 
-    const { userId } = req.body;
+    const userId = req.userId;
 
     const images = await imageModel
       .find({ userId })
@@ -88,11 +88,13 @@ export const getUserImages = async (req, res) => {
     });
 
   } catch (error) {
+
     res.json({
       success: false,
       message: error.message,
     });
+
   }
 };
 
-export default generateImage;
+export default { generateImage, getUserImages };
