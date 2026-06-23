@@ -15,21 +15,17 @@ app.use(express.json())
 const allowedOrigins = [
   "http://localhost:5173",
   "https://imagify-one-theta.vercel.app",
+  "https://imagify-dusky.vercel.app",
   "https://imagify-9u2f7cx0s-shashank-shekhars-projects.vercel.app"
 ];
 
 app.use(
   cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
+    origin: true,
     credentials: true,
   })
 );
+
 await connectDB()
 
 app.use('/api/user', userRouter)
