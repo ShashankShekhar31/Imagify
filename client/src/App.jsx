@@ -9,6 +9,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Login from './components/Login'
 import { AppContext } from './context/AppContext'
+import History from './pages/History'
 
 const App = () => {
   
@@ -24,6 +25,7 @@ const App = () => {
         <Route path='/' element={<Home/>}/>
         <Route path='/result' element={<Result/>}/>
         <Route path='/buy' element={<BuyCredit/>}/>
+        <Route path='/history' element={<History />} />
       </Routes>
       <Footer />
       
