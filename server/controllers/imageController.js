@@ -1,6 +1,7 @@
 import axios from "axios"
 import userModel from "../models/userModel.js"
 import FormData from "form-data"
+import imageModel from "../models/imageModel.js";
 
 export const generateImage = async (req, res) => {
   try {
@@ -50,6 +51,12 @@ export const generateImage = async (req, res) => {
     user.creditBalance -= 1;
     await user.save();
 
+    await imageModel.create({
+      userId,
+      prompt,
+      imageUrl: resultImage,
+    });
+
     return res.status(200).json({
       success: true,
       message: "Image Generated",
@@ -62,6 +69,28 @@ export const generateImage = async (req, res) => {
     res.status(500).json({
       success: false,
       message: error.message || "Server Error",
+    });
+  }
+};
+
+export const getUserImages = async (req, res) => {
+  try {
+
+    const { userId } = req.body;
+
+    const images = await imageModel
+      .find({ userId })
+      .sort({ createdAt: -1 });
+
+    res.json({
+      success: true,
+      images,
+    });
+
+  } catch (error) {
+    res.json({
+      success: false,
+      message: error.message,
     });
   }
 };
