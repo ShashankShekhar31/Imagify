@@ -33,8 +33,10 @@ const History = () => {
   }
 
   useEffect(() => {
-    fetchHistory()
-  }, [])
+    if (token) {
+      fetchHistory();
+    }
+  }, [token]);
 
   if (loading) {
     return (
@@ -96,4 +98,4 @@ const History = () => {
   )
 }
 
-export default History
+export default History;

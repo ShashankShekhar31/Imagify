@@ -98,4 +98,4 @@ export const getUserImages = async (req, res) => {
   }
 };
 
-export default { generateImage, getUserImages };
+export default generateImage;
