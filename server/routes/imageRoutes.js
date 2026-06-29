@@ -12,12 +12,12 @@ imageRouter.post(
   '/generate-image',
   userAuth,
   generateImage
-)
+);
 
-imageRouter.get(
-  '/history',
-  userAuth,
-  getUserImages
-)
+imageRouter.post(
+    "/history",
+    userAuth,
+    getUserImages
+);
 
-export default imageRouter
+export default imageRouter;

@@ -5,7 +5,8 @@ import imageModel from "../models/imageModel.js";
 
 export const generateImage = async (req, res) => {
   try {
-    const { userId, prompt } = req.body;
+    const userId = req.userId;
+    const { prompt } = req.body;
 
     if (!userId || !prompt) {
       return res.status(400).json({

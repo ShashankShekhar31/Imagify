@@ -13,8 +13,9 @@ const History = () => {
 
     try {
 
-      const { data } = await axios.get(
+      const { data } = await axios.post(
         backendUrl + '/api/image/history',
+        {},
         {
           headers: { token }
         }
