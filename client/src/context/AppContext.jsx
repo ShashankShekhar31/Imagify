@@ -18,19 +18,23 @@ const AppContextProvider = (props) => {
     const navigate = useNavigate()
     
 
-    const loadCreditsData = async ()=>{
+    const loadCreditsData = async () => {
         try {
-            const { data } = await axios.get(backendUrl + '/api/user/credits', {headers: {token}})
+            const { data } = await axios.get(
+                backendUrl + "/api/user/credits",
+                {
+                    headers: { token },
+                }
+            );
 
-            if(data.success){
-                setCredit(data.credits)
-                setUser(data.user)
+            if (data.success) {
+                setCredit(data.creditBalance);
+                setUser(data.user);
             }
         } catch (error) {
-            console.log(error)
-            toast.error(error.message)   
+            console.log(error);
         }
-    }
+    };
 
     const generateImage = async (prompt)=>{
         try {

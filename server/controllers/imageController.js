@@ -98,4 +98,101 @@ export const getUserImages = async (req, res) => {
   }
 };
 
+export const getDashboard = async (req, res) => {
+  try {
+    const userId = req.userId;
+
+    const totalImages = await imageModel.countDocuments({
+      userId,
+    });
+
+    const user = await userModel.findById(userId);
+
+    const latestImage = await imageModel
+      .findOne({ userId })
+      .sort({ createdAt: -1 });
+
+    res.json({
+      success: true,
+      dashboard: {
+        totalImages,
+        creditBalance: user.creditBalance,
+        latestImage,
+        userName: user.name,
+      },
+    });
+
+  } catch (error) {
+    res.json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
+export const deleteImage = async (req, res) => {
+    try {
+        const userId = req.userId;
+        const { id } = req.params;
+        const image = await imageModel.findById(id);
+
+        if(!image){
+            return res.json({
+                success:false,
+                message:"Image not found"
+            });
+        }
+        if(image.userId.toString() !== userId){
+            return res.json({
+                success:false,
+                message:"Unauthorized"
+            });
+        }
+        await image.deleteOne();
+        res.json({
+            success:true,
+            message:"Image deleted"
+        });
+    }
+    catch(error){
+        res.json({
+            success:false,
+            message:error.message
+        });
+    }
+}
+
+export const toggleFavorite = async (req,res)=>{
+
+    try{
+
+        const image = await imageModel.findById(req.params.id);
+
+        if(!image){
+            return res.json({
+                success:false,
+                message:"Image not found"
+            });
+        }
+
+        image.favorite = !image.favorite;
+
+        await image.save();
+
+        res.json({
+            success:true,
+            favorite:image.favorite
+        });
+
+    }catch(error){
+
+        res.json({
+            success:false,
+            message:error.message
+        });
+
+    }
+
+}
+
 export default generateImage;

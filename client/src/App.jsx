@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import Login from './components/Login'
 import { AppContext } from './context/AppContext'
 import History from './pages/History'
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
   
@@ -26,6 +27,7 @@ const App = () => {
         <Route path='/result' element={<Result/>}/>
         <Route path='/buy' element={<BuyCredit/>}/>
         <Route path='/history' element={<History />} />
+        <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
       <Footer />
       
