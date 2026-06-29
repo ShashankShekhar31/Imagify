@@ -11,7 +11,7 @@ userRouter.get('/credits', userAuth, userCredits)
 // userRouter.post('/pay-razor', userAuth, paymentRazorpay)
 // userRouter.post('/verify-razor', verifyRazorpay)
 
-export default userRouter
+export default userRouter;
 
 
 // <!> route to verify in postman

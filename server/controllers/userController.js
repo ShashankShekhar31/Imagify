@@ -9,7 +9,7 @@ const registerUser = async (req, res)=>{
         const {name, email, password} = req.body;
 
         if(!name | !email | !password){
-            return res.json({success: false, messege: 'Missing Details'})
+            return res.json({success: false, message: 'Missing Details'})
         }
 
         const salt = await bcrypt.genSalt(10)
@@ -30,7 +30,7 @@ const registerUser = async (req, res)=>{
 
     }catch (error){
         console.log(error)
-        res.json({success: false, messege: error.messege})
+        res.json({success: false, message: error.message})
     }
 }
 
@@ -40,7 +40,7 @@ const loginUser = async(req, res)=>{
         const user = await userModel.findOne({email})
 
         if(!user){
-            return res.json({success: false, messege: 'User not found'})
+            return res.json({success: false, message: 'User not found'})
         }
 
         const isMatch = await bcrypt.compare(password, user.password)
@@ -50,25 +50,31 @@ const loginUser = async(req, res)=>{
 
             res.json({success: true, token, user:{name: user.name}})
         }else{
-            return res.json({success: false, messege: 'Invalid Credentials'})
+            return res.json({success: false, message: 'Invalid Credentials'})
         }
 
     } catch (error) {
         console.log(error)
-        res.json({success: false, messege: error.messege})
+        res.json({success: false, message: error.message})
     }
 }
 
 const userCredits = async(req, res)=>{
     try {
-        const {userId} = req.body
+        const userId = req.userId;
 
-        const user = await userModel.findById(userId)
-        res.json({sucess: true, credit: user.creditBalance, user: {name:user.name}})
+        const user = await userModel.findById(userId);
+        if (!user) {
+            return res.json({
+                success: false,
+                message: "User not found"
+            });
+        }
+        res.json({success: true, credit: user.creditBalance, user: {name:user.name}})
 
     } catch (error) {
-        console.log(error.message)
-        res.json({success: false, messege: error.messege})
+        console.log(error.message);
+        res.json({success: false, message: error.message});
     }
 }
 
