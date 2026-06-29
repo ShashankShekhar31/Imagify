@@ -8,7 +8,7 @@ export const AppContext = createContext()
 
 const AppContextProvider = (props) => {
     const [user, setUser] = useState(null);
-    const [showLogin, setShowLogin] = useState(false);
+    const [credit, setCredit] = useState(0);
     const [token, setToken] = useState(localStorage.getItem('token'))
 
     const [credit, setCredit] = useState(false)
@@ -65,7 +65,7 @@ const AppContextProvider = (props) => {
 
     useEffect(()=>{
         if(token){
-            loadCreditsData()
+            loadCreditsData();
         }
     },[token])
 

@@ -176,10 +176,9 @@ export const toggleFavorite = async (req,res)=>{
         }
 
         image.favorite = !image.favorite;
-
         await image.save();
 
-        res.json({
+        return res.json({
             success:true,
             favorite:image.favorite
         });
