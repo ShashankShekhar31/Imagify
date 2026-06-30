@@ -475,7 +475,7 @@ https://github.com/ShashankShekhar31
 
 LinkedIn
 
-(Add your LinkedIn URL)
+www.linkedin.com/in/shashank-shekhar-61633a273
 
 ---
 
