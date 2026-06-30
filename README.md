@@ -22,43 +22,55 @@ AI-powered Text-to-Image SaaS built using the MERN Stack. Generate stunning AI i
 
 ## 🏠 Home Page
 
-> **Paste Screenshot Here**
+> <img width="1900" height="930" alt="Image" src="https://github.com/user-attachments/assets/0e5d15c8-2503-4e17-9ccc-f3ae08004085" />
+
+---
+
+## 🎨 About the AI Generator
+
+> <img width="1897" height="927" alt="Image" src="https://github.com/user-attachments/assets/cb1e1922-8d59-4caa-9250-5d854bf004c5" />
 
 ---
 
 ## 🔐 Login / Signup
 
-> **Paste Screenshot Here**
+> <img width="1917" height="930" alt="Image" src="https://github.com/user-attachments/assets/6042d300-fe73-47bb-a61e-2b38a9fd285f" />
+
+---
+
+## ⚙️ How It Works
+
+> <img width="1897" height="832" alt="Image" src="https://github.com/user-attachments/assets/0a7999e7-a852-4f81-b5d0-88fe752fef50" />
 
 ---
 
 ## 🎨 Image Generation
 
-> **Paste Screenshot Here**
+> <img width="1900" height="927" alt="Image" src="https://github.com/user-attachments/assets/6bd3b466-6eb3-4406-b5a7-b586ecbd0c49" />
 
 ---
 
 ## 📜 Image History
 
-> **Paste Screenshot Here**
-
----
-
-## ❤️ Favorite Images
-
-> **Paste Screenshot Here**
+> <img width="1900" height="927" alt="Image" src="https://github.com/user-attachments/assets/96fa655a-3180-4233-bea3-7259507bea96" />
 
 ---
 
 ## 📊 User Dashboard
 
-> **Paste Screenshot Here**
+> <img width="1917" height="925" alt="Image" src="https://github.com/user-attachments/assets/cbbcd1a9-583a-4643-b509-e86aeafa09d2" />
 
 ---
 
 ## 💳 Pricing Page
 
-> **Paste Screenshot Here**
+> <img width="1902" height="922" alt="Image" src="https://github.com/user-attachments/assets/48c27f51-939d-4864-ad6b-f5325d70f1c6" />
+
+---
+
+## ⭐ Customer Review Page
+
+> <img width="1897" height="927" alt="Image" src="https://github.com/user-attachments/assets/d5a6b9ca-8c2b-4593-8a23-3f49282e48ce" />
 
 ---
 
