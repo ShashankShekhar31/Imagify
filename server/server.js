@@ -9,6 +9,7 @@ import imageRouter from './routes/imageRoutes.js'
 import helmet from "helmet";
 import morgan from "morgan";
 import notFound from "./middlewares/notFound.js";
+import errorMiddleware from "./middlewares/errorMiddleware.js";
 
 const PORT = process.env.PORT || 4000
 const app = express()
@@ -57,4 +58,5 @@ app.get("/health", (req, res) => {
 });
 
 app.use(notFound);
+app.use(errorMiddleware);
 app.listen(PORT, ()=> console.log('Server running on port ' + PORT))
