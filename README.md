@@ -1,73 +1,474 @@
-# Imagify - AI Image Generator
+# 🚀 Imagify - AI Text-to-Image Generator
 
-Welcome to **Imagify!** This repository contains the complete source code for our AI-powered image generation web application.
+<p align="center">
 
-## About Imagify
+AI-powered Text-to-Image SaaS built using the MERN Stack. Generate stunning AI images from text prompts with user authentication, credit management, image history, favorites, dashboards, and secure cloud deployment.
 
-At ***Imagify***, we're bringing your imagination to life using the power of artificial intelligence. Just type a prompt, and Imagify will generate a stunning image based on your words. Whether you're a designer, artist, or just curious, this platform makes creative image generation simple and magical.
+</p>
 
-## Features
+---
 
-- 🔐 **Authentication**: Register and log in to access the generator.
-- 💳 **Credit System**: Every user starts with free credits. Each image costs 1 credit.
-- 🎨 **Text-to-Image Generator**: Convert any idea into art using the ClipDrop API.
-- 🧾 **Prompt History**: View your previously generated images and prompts.
-- 🧠 **No File Hassles**: Images are displayed directly using base64 encoding.
-- 🌍 **Live Deployment**: Hosted on Vercel for fast and free access.
+# 📌 Live Demo
 
-## Technical Stack
+### 🌐 Frontend
+> https://imagify-a4x18j0w1-shashank-shekhars-projects.vercel.app/
 
-* **Frontend**: React (Next.js)
-* **Backend**: Node.js with Express-style API routes in Next.js
-* **Database**: MongoDB (with Mongoose)
-* **Image Generation**: ClipDrop API
-* **Authentication**: JSON Web Tokens (JWT)
-* **Hosting**: Vercel
-* **Environment Management**: dotenv, Vercel Variables
+### 🚀 Backend API
+> https://imagify-backend-1dju.onrender.com
 
-## License
+---
 
-This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/) – see the LICENSE file for details.
+# 📸 Project Screenshots
 
-## Contact Us
+## 🏠 Home Page
 
-If you have any questions or need support, feel free to contact me at **Shashank.shekhar0331@gmail.com**.  
-I'd love to hear your feedback and ideas!
+> **Paste Screenshot Here**
 
-Thank you for visiting **Imagify!** Enjoy creating your dream visuals. 🎨✨
+---
 
-## Issues
+## 🔐 Login / Signup
 
-If you encounter any bugs or have suggestions for improvements, please open an issue on GitHub. Your feedback helps us grow!
-## Contributing
+> **Paste Screenshot Here**
 
-We welcome contributions from the community to improve our website! If you'd like to contribute, please follow these steps:
+---
 
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and ensure everything works as expected.
-4. Submit a pull request detailing your changes.
+## 🎨 Image Generation
 
-## Snapshots
+> **Paste Screenshot Here**
 
-**Home Page**  
-![front](https://github.com/user-attachments/assets/c4e5f8b7-7911-4252-9a3a-7b5792762b28)
+---
 
-**How it Works**  
-![steps](https://github.com/user-attachments/assets/49f31383-ff62-4a29-8870-29699277dc26)
+## 📜 Image History
 
-**About Our Imagify**  
-![about](https://github.com/user-attachments/assets/c9d305c2-58fb-4091-a546-42a967a4c061)
+> **Paste Screenshot Here**
 
-**Customer Reviews**  
-![review](https://github.com/user-attachments/assets/977f19ed-0474-4cde-b039-6831ebc9e242)
+---
 
-**Login/SignUp Page**  
-![auth](https://github.com/user-attachments/assets/8f758447-adea-442c-817a-2cd0599e6634)
+## ❤️ Favorite Images
 
-**Subscription Page**  
-![pricing](https://github.com/user-attachments/assets/1c6d1952-93dc-4786-815c-947f3201a765)
+> **Paste Screenshot Here**
 
-**CopyRight Page**  
-![footer](https://github.com/user-attachments/assets/73b88e2d-433c-420b-8945-20799ab34272)
+---
 
+## 📊 User Dashboard
+
+> **Paste Screenshot Here**
+
+---
+
+## 💳 Pricing Page
+
+> **Paste Screenshot Here**
+
+---
+
+# ✨ Features
+
+## AI Image Generation
+
+- Generate images using text prompts
+- High-quality AI generated images
+- Instant image generation
+- Download generated images
+
+---
+
+## Authentication
+
+- User Registration
+- Secure Login
+- JWT Authentication
+- Protected Routes
+- Persistent Sessions
+
+---
+
+## User Dashboard
+
+- Total Images Generated
+- Credits Remaining
+- Latest Prompt
+- Personalized Dashboard
+
+---
+
+## Image History
+
+- View all generated images
+- Download previous images
+- Delete generated images
+- Favorite important images
+
+---
+
+## Credit System
+
+- Credit deduction after every generation
+- Live credit updates
+- Dashboard integration
+- Navbar credit counter
+
+---
+
+## Responsive UI
+
+- Desktop
+- Tablet
+- Mobile Friendly
+
+---
+
+## Cloud Deployment
+
+- Frontend deployed on Vercel
+- Backend deployed on Render
+- MongoDB Atlas Database
+
+---
+
+# 🏗 Project Architecture
+
+```
+                     User
+
+                      │
+
+                      ▼
+
+              React Frontend
+                 (Vercel)
+
+                      │
+          REST API (Axios + JWT)
+
+                      ▼
+
+             Express.js Backend
+                 (Render)
+
+      ┌──────────────┴──────────────┐
+
+      ▼                             ▼
+
+ MongoDB Atlas               AI Image API
+
+      │
+
+      ▼
+
+ User Data
+ Images
+ Favorites
+ Credits
+```
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+
+- React.js
+- React Router
+- Tailwind CSS
+- Axios
+- React Toastify
+
+---
+
+## Backend
+
+- Node.js
+- Express.js
+- JWT Authentication
+- Bcrypt
+- Multer
+
+---
+
+## Database
+
+- MongoDB Atlas
+- Mongoose ODM
+
+---
+
+## Deployment
+
+- Vercel
+- Render
+
+---
+
+## AI Services
+
+- ClipDrop API
+
+---
+
+# 📂 Folder Structure
+
+```
+Imagify
+│
+├── client
+│   ├── src
+│   │   ├── assets
+│   │   ├── components
+│   │   ├── context
+│   │   ├── pages
+│   │   └── App.jsx
+│   │
+│   └── package.json
+│
+├── server
+│   ├── config
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── server.js
+│   └── package.json
+│
+├── README.md
+├── API.md
+├── ARCHITECTURE.md
+├── DEPLOYMENT.md
+└── LICENSE
+```
+
+---
+
+# ⚙ Installation
+
+## Clone Repository
+
+```bash
+git clone https://github.com/ShashankShekhar31/Imagify.git
+```
+
+---
+
+## Client
+
+```bash
+cd client
+
+npm install
+
+npm run dev
+```
+
+---
+
+## Server
+
+```bash
+cd server
+
+npm install
+
+npm run server
+```
+
+---
+
+# 🔐 Environment Variables
+
+## Client (.env)
+
+```env
+VITE_BACKEND_URL=YOUR_BACKEND_URL
+```
+
+---
+
+## Server (.env)
+
+```env
+MONGODB_URI=
+JWT_SECRET=
+
+CLIPDROP_API=
+
+CURRENCY=
+
+FRONTEND_URL=
+```
+
+---
+
+# 📡 API Overview
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | /api/user/register | Register User |
+| POST | /api/user/login | Login User |
+| GET | /api/user/credits | Get User Credits |
+| POST | /api/image/generate-image | Generate Image |
+| POST | /api/image/history | Image History |
+| DELETE | /api/image/delete/:id | Delete Image |
+| PATCH | /api/image/favorite/:id | Toggle Favorite |
+
+Detailed API documentation is available in **API.md**
+
+---
+
+# 🔒 Security Features
+
+- JWT Authentication
+- Password Hashing using Bcrypt
+- Protected Routes
+- Environment Variables
+- MongoDB Validation
+- Authentication Middleware
+- User Authorization
+- Secure API Requests
+
+---
+
+# 📈 Production-Level Engineering
+
+This project follows production-oriented software engineering practices:
+
+- Modular Backend Architecture
+- MVC Folder Structure
+- Context API for Global State
+- Reusable React Components
+- RESTful API Design
+- Environment Variable Management
+- Error Handling
+- Loading States
+- Toast Notifications
+- Secure Authentication
+- Cloud Deployment
+
+---
+
+# 🚀 Scalability
+
+The application is designed with scalability in mind:
+
+- Component-based React architecture
+- Modular Express controllers and routes
+- Easily replaceable AI provider
+- MongoDB Atlas cloud database
+- Stateless JWT authentication
+- REST API architecture
+- Ready for Redis caching
+- Easy integration with payment gateways
+- Suitable for horizontal backend scaling
+
+---
+
+# 🌍 Deployment
+
+## Frontend
+
+Hosted on
+
+**Vercel**
+
+---
+
+## Backend
+
+Hosted on
+
+**Render**
+
+---
+
+## Database
+
+Hosted on
+
+**MongoDB Atlas**
+
+---
+
+Deployment guide is available in **DEPLOYMENT.md**
+
+---
+
+# 🔮 Future Improvements
+
+- Google OAuth
+- Razorpay Payment Gateway
+- Email Verification
+- Password Reset
+- AI Prompt Templates
+- Image Collections
+- Image Sharing
+- Prompt History Search
+- Admin Dashboard
+- Usage Analytics
+- Dark Mode
+- PWA Support
+
+---
+
+# 📊 Project Highlights
+
+✔ AI Powered SaaS
+
+✔ MERN Stack
+
+✔ JWT Authentication
+
+✔ Credit Management System
+
+✔ Dashboard Analytics
+
+✔ Image History
+
+✔ Favorite Images
+
+✔ Delete Images
+
+✔ Secure REST APIs
+
+✔ MongoDB Atlas
+
+✔ Responsive UI
+
+✔ Cloud Deployment
+
+---
+
+# 🧪 Testing
+
+Manual testing performed for:
+
+- User Registration
+- Login
+- Authentication
+- Credit Deduction
+- Image Generation
+- Dashboard
+- Image History
+- Delete Image
+- Favorite Images
+- Protected APIs
+
+---
+
+# 👨‍💻 Author
+
+**Shashank Shekhar**
+
+GitHub
+
+https://github.com/ShashankShekhar31
+
+LinkedIn
+
+(Add your LinkedIn URL)
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
