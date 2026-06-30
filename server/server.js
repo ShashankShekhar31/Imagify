@@ -8,6 +8,7 @@ import userRouter from './routes/userRoutes.js'
 import imageRouter from './routes/imageRoutes.js'
 import helmet from "helmet";
 import morgan from "morgan";
+import notFound from "./middlewares/notFound.js";
 
 const PORT = process.env.PORT || 4000
 const app = express()
@@ -55,4 +56,5 @@ app.get("/health", (req, res) => {
     });
 });
 
+app.use(notFound);
 app.listen(PORT, ()=> console.log('Server running on port ' + PORT))
