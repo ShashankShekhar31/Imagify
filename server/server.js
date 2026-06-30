@@ -7,12 +7,14 @@ import connectDB from './config/mongodb.js'
 import userRouter from './routes/userRoutes.js'
 import imageRouter from './routes/imageRoutes.js'
 import helmet from "helmet";
+import morgan from "morgan";
 
 const PORT = process.env.PORT || 4000
 const app = express()
 
 app.use(express.json())
 app.use(helmet());
+app.use(morgan("dev"));
 
 const allowedOrigins = [
   "http://localhost:5173",
