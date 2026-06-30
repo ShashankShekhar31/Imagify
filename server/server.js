@@ -2,6 +2,7 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 dotenv.config();
+import "./config/env.js";
 
 import connectDB from './config/mongodb.js'
 import userRouter from './routes/userRoutes.js'
