@@ -6,11 +6,13 @@ dotenv.config();
 import connectDB from './config/mongodb.js'
 import userRouter from './routes/userRoutes.js'
 import imageRouter from './routes/imageRoutes.js'
+import helmet from "helmet";
 
 const PORT = process.env.PORT || 4000
 const app = express()
 
 app.use(express.json())
+app.use(helmet());
 
 const allowedOrigins = [
   "http://localhost:5173",
@@ -38,7 +40,17 @@ app.get('/test', (req, res) => {
         success: true,
         message: "Backend working",
         timestamp: new Date()
-    })
-})
+    });
+});
+
+app.get("/health", (req, res) => {
+    res.status(200).json({
+        success: true,
+        status: "OK",
+        uptime: process.uptime(),
+        environment: process.env.NODE_ENV || "development",
+        timestamp: new Date(),
+    });
+});
 
 app.listen(PORT, ()=> console.log('Server running on port ' + PORT))
