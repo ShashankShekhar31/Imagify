@@ -1,4 +1,20 @@
-# 🚀 Imagify - AI Text-to-Image Generator
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?logo=mongodb&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38BDF8?logo=tailwindcss&logoColor=white)
+![Clerk](https://img.shields.io/badge/Clerk-Authentication-6C47FF)
+![JWT](https://img.shields.io/badge/JWT-Secure_Auth-000000?logo=jsonwebtokens)
+![Razorpay](https://img.shields.io/badge/Razorpay-Payments-0C6CF2?logo=razorpay&logoColor=white)
+![ClipDrop API](https://img.shields.io/badge/ClipDrop-AI_Image_Generation-FF6B35)
+![REST API](https://img.shields.io/badge/REST-API-009688)
+![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?logo=vercel)
+![Render](https://img.shields.io/badge/Backend-Render-46E3B7)
+![Responsive](https://img.shields.io/badge/Responsive-Mobile_First-2196F3)
+![Performance](https://img.shields.io/badge/Performance-Optimized-4CAF50)
+![Full Stack](https://img.shields.io/badge/Full_Stack-MERN-8A2BE2)
+![AI Powered](https://img.shields.io/badge/AI-Powered-FF4081)
+
+# Imagify - AI Text-to-Image Generator
 
 <p align="center">
 
@@ -8,7 +24,7 @@ AI-powered Text-to-Image SaaS built using the MERN Stack. Generate stunning AI i
 
 ---
 
-# 📌 Live Demo
+# Live Demo
 
 ### 🌐 Frontend
 > https://imagify-a4x18j0w1-shashank-shekhars-projects.vercel.app/
